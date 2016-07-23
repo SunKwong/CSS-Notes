@@ -1,0 +1,264 @@
+@charset'utf-8';
+
+/*盒模型*/
+
+/*
+盒子的解析方式
+box-sizing:属性值;
+*/
+/*注意：IE8需加后缀*/
+div{
+	/*border和padding用于元素的总长度*/
+	box-sizing:content-box;
+	/*border和padding不用于元素的总长度*/
+	/*box-sizing:border-box;*/
+}
+
+/*内容盒子，元素尺寸*/
+/*
+元素的宽度
+width:属性值;
+
+元素的最小宽度
+min-width:属性值;
+
+元素的最大宽度
+max-width:属性值;
+*/
+div{
+	/*默认值*//*width在auto下是100%的值*/
+	width: auto;
+	/*设置值*/
+	width: 200px;
+	/*min-width: 50%;*/
+	max-width: 100%;
+}
+/*
+元素的高度
+height:属性值;
+
+元素的最小高度
+min-height:属性值;
+
+元素的最大高度
+max-height:属性值;
+*/
+div{
+	/*默认值*//*height在auto下是自适应*/
+	height: auto;
+	/*设置值*/
+	height: 200px;
+	/*min-height: 50%;*/
+	max-height: 100%;
+
+}
+
+/*内边距盒子*/
+/*
+元素内边距
+padding:上 右 下 左;
+*/
+div{
+	padding: 50px 50px 50px 50px;
+	/*单独设置某边的padding*/
+	padding-left: 50px;
+}
+
+/*边框盒子*/
+/*
+元素边框
+border:长度 样式 颜色值;
+*/
+
+/*
+边框宽度
+border-width:属性值;
+*/
+div{
+	border-width: 50px;
+}
+
+/*
+边框样式
+border-style:属性值;
+*/
+div{
+	/*默认值*/
+	border-style: none;
+	/*实线边框*/
+	border-style: solid;
+	/*破折线边框*/
+	border-style: dashed;
+	/*圆点线边框*/
+	border-style: dotted;
+	/*双边线边框*/
+	border-style: double;
+	/*槽线边框*/
+	border-style: groove;
+	/*脊线边框*/
+	border-style: ridge;
+	/*内嵌效果边框*/
+	border-style: inset;
+	/*外凸效果边框*/
+	border-style: outset;
+}
+/*
+边框颜色
+border-color:属性值;
+*/
+div{
+	border-color: blue;
+	/*单独设置某一边*/
+	border-top-color: red;
+	border-right-color: blue;
+	border-bottom-color: green;
+	border-left-color:yellow;
+}
+
+/*
+圆角边框
+border-radius:属性值;
+*/
+div{
+	/*设置圆角边框*/
+	/*border-radius: 4px;*/
+	/*单独设置某一个角的圆角*/
+	/*border-top-left-radius:8px;*/
+}
+
+/*
+外边距
+margin:上 右 下 左;
+*/
+div{
+	margin: 50px 50px 50px 50px;
+	/*单独设置某边的外边剧*/
+	margin-left: 50px;
+}
+
+/*外围轮廓(非盒模型布局，在margin中显示)*/
+/*
+外围轮廓
+outline:宽度 样式 颜色;
+*/
+div{
+	outline: 50px solid red;
+}
+/*
+外围轮廓的宽度
+outline-width:属性值;
+*/
+div{
+	outline-width: 50px;
+}
+/*
+外围轮廓的样式(与border-style样式相同)
+outline-style:属性值;
+*/
+div{
+	outline-style: solid;
+}
+/*
+外围轮廓颜色
+outline-color:属性值;
+*/
+div{
+	outline-color: red;
+}
+/*
+外围轮廓偏移量
+outline-offset:属性值;
+*/
+/*解释：轮廓距离元素边框边缘的偏移量*/
+div{
+	outline-offset:10px;
+}
+
+/*
+元素盒子类型
+display:属性值;
+*/
+div{
+	/*盒子隐藏，不占位*/
+	/*display: none;*/
+	/*块级元素*/
+	display: block;
+	/*行内元素*/
+	display: inline;
+	/*行内-块元素*/
+	/*解释：可设置宽高*/
+	display: inline-block;
+}
+
+/*
+元素可见性
+visibility:属性值;
+*/
+div{
+	/*元素在页面可见（默认值）*/
+	visibility: visible;
+	/*元素不可见，但会占据空间*/
+	/*visibility: hidden;*/
+	/*元素不可见，隐藏表格的行与列（非表格效果同hidden）*/
+	/*visibility: collapse;*/
+}
+
+/*
+设置宽高元素内容溢出
+overflow:属性值;
+*/
+div{
+	/*无论是否溢出，都显示内容*/
+	overflow: visible;
+	/*有溢出才显示滚动条（浏览器默认）*/
+	overflow: auto;
+	/*溢出隐藏*/
+	overflow: hidden;
+	/*无论是否溢出，都显示滚动条*/
+	overflow: scroll;
+}
+
+/*
+元素尺寸设置
+resize:属性值;
+*/
+div{
+	/*默认值*/
+	resize:none;
+	/*注意：一般元素配合overflow:auto才可调节宽高*/
+	/*用户可以调节宽度*/
+	overflow: auto;
+	resize:horizontal;
+	/*用户可以调节高度*/
+	resize:vertical;
+	/*用户可以调节宽和高*/
+	resize:both;
+}
+
+/*
+display:block;浮动
+float:属性值;
+*/
+div{
+	/*禁用浮动*/
+	float: none;
+	/*左浮动*/
+	float: left;
+	/*右浮动*/
+	float:right;
+}
+/*
+display:block;下一元素清除浮动
+clear:属性值;
+*/
+div{
+	/*允许浮动*/
+	clear: none;
+	/*清除左浮动*/
+	clear: left;
+	/*清除右浮动*/
+	clear: right;
+	/*清除两种浮动*/
+	clear: both;
+}
+

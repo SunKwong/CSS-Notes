@@ -1,0 +1,156 @@
+@charset'utf-8';
+
+div{
+	width: 200px;height: 200px;
+	background-color: blue;
+	border: 1px solid green;
+}
+/*@keyframes声明动画关键帧*/
+/*单独写每帧*/
+@keyframes myani1{
+	0%{
+		background-color: blue;
+		margin-left: 0px;
+	}
+	50%{
+		background-color: black;
+		margin-left: 100px;
+	}
+	100%{
+		background-color: blue;
+		margin-left: 0;
+	}
+}
+/*合并写帧*/
+@keyframes myani2{
+	0%,100%{
+		background-color: blue;
+		margin-left: 0px;
+	}
+	50%{
+		background-color: black;
+		margin-left: 100px;
+	}
+}
+/*始尾*/
+@keyframes myani3{
+	from{
+		background-color: blue;
+		margin-left: 0px;
+	}
+	to{
+		background-color: black;
+		margin-left: 100px;
+	}
+}
+
+@keyframes myani4{
+	0%{
+		background-color: blue;
+		margin-left: 0px;
+	}
+	100%{
+		background-color: black;
+		margin-left: 100px;
+	}
+}
+
+/*
+调用@keyframes动画
+animation-name:属性值;
+*/
+div{
+	/*默认值*/
+	animation-name:none;
+	/*调用@keyframes动画*/
+	animation-name:myani4;
+}
+
+/*
+动画播放时间
+animation-duration:属性值;
+*/
+div{
+	animation-duration:1s;
+}
+
+/*
+动画类型
+animation-timing-function:属性值;
+*/
+div{
+	/*速度由快到慢，逐渐变慢*/
+	/*贝塞尔曲线(0.25,0.1,0.25,1.0)*/
+	animation-timing-function:ease;
+	/*匀速动画*/
+	/*贝塞尔曲线(0.0,0.0,1.0,1.0)*/
+	animation-timing-function:linear;
+	/*加速动画*/
+	/*贝塞尔曲线(0.42,0,1.0,1.0)*/
+	animation-timing-function:ease-in;
+	/*减速动画*/
+	/*贝塞尔曲线(0,0,0.58,1.0)*/
+	animation-timing-function:ease-out;
+	/*先加速，再减速*/
+	/*贝塞尔曲线(0.42,0,0.58,1.0)*/
+	animation-timing-function:ease-in-out;
+	/*自定义贝塞尔曲线*/
+	animation-timing-function:cubic-bezier(0,0,1.0,1.0);
+}
+
+/*
+设置动画延迟时间
+animation-delay:属性值;
+*/
+div{
+	animation-delay:1s;
+}
+
+/*
+动画循环次数
+animation-iteration-count:属性值;
+*/
+div{
+	/*设置次数(默认一次)*/
+	animation-iteration-count:1;
+	/*无限次循环*/
+	animation-iteration-count:infinite;
+}
+
+/*
+动画方向交替
+animation-direction:属性值;
+*/
+/*备注：
+设置animation-iteration-count次数大于1,
+且最后一帧不在起始位置时可看到效果*/
+div{
+	/*每次播放向前(默认值)*/
+	animation-direction:normal;
+	/*一次向前，一次向后交替进行*/
+	animation-direction:alternate;
+}
+
+/*
+设置停止播放动画
+animation-play-state:属性值;
+*/
+div{
+	/*停止播放动画*/
+	/*animation-play-state:paused;*/
+}
+
+/*
+动画结束后是否返回初始位置
+animation-fill-mode:属性值;
+*/
+div{
+	/*动画结束后返回起始关键帧(默认值)*/
+	/*animation-fill-mode:none;*/
+	/*动画结束后不返回起始关键帧位置*/
+	/*animation-fill-mode:forwards;*/
+	/*动画结束后返回起始关键帧位置*/
+	/*animation-fill-mode:backforwards;*/
+	/*根据情况产生forwards和backforwards效果*/
+	animation-fill-mode:both;
+}

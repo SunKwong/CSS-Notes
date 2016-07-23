@@ -1,0 +1,37 @@
+@charset'utf-8';
+
+/*颜色与单位*/
+
+/*颜色*/
+div{
+	/*颜色名*/
+	color: red;
+	/*十六进制*/
+	color: #ff0000;
+	/*rgb(r,g,b)*/
+	color: rgb(0,128,128);
+	/*rgba(r,g,b,a)*/
+	color: rgba(0,128,128,0.5);
+	/*hsl(h,s,l)*/
+	color: hsl(120,100%,30%);
+	/*hsla(h,s,l,a)*/
+	color: hsl(120,100%,30%,0.5);
+}
+
+/*单位*/
+/*绝对长度厘米(cm)、毫米(mm)、英寸(in)、磅(pt)、pica(pc)*/
+/*相对长度像素(px)、相对父元素百分比(%)、与根元素html字号挂钩(rem)、与父元素字号挂钩(em)*/
+
+/*
+补充：
+网页默认的字号大小为16px，
+通过<html>设置62.5%，将网页基准设置为10px。
+*/
+/*注意：chorm浏览器html最小字体为12px,这会对设置html为10px的rem使用带来一些问题
+所以可以设置html字体为625%来使用*/
+html{
+	font-size: 625%;
+}
+body{
+	font-size: .14rem;
+}

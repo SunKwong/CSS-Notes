@@ -1,0 +1,77 @@
+@charset'utf-8';
+
+/*表格相关*/
+
+/*
+单元格边框样式
+border-collapse:属性值;
+*/
+table{
+	/*单元格边框独立（默认值）*/
+	border-collapse: separate;
+	/*相邻单元格边框合并*/
+	border-collapse: collapse;
+}
+
+/*
+单元格边框间距
+border-spacing:属性值;
+*/
+table{
+	/*注意：需设置border-collapse:separate方可设置生效*/
+	border-spacing: 4px;
+}
+
+/*
+空单元格边框显示
+empty-cells:属性值;
+*/
+table{
+	/*显示边框（默认值）*/
+	empty-cells: show;
+	/*不显示边框*/
+	/*注意：需设置border-collapse:separate方可设置生效*/
+	empty-cells: hide;
+}
+
+/*
+表格标题位置
+caption-side:属性值;
+*/
+table{
+	/*标题在上方（默认值）*/
+	caption-side: top;
+	/*标题在下方*/
+	caption-side: bottom;
+}
+
+/*
+布局样式
+table-layout:属性值;
+*/
+table{
+	/*内容过长是，拉伸单元格（默认值）*/
+	table-layout: auto;
+	/*内容过长时，不拉伸单元格*/
+	table-layout: fixed;
+}
+
+/*其它表格样式*/
+/*
+垂直对齐方式
+vertical-align:属性值;
+*/
+table tr td{
+	height: 36px;
+	/*内容与基线对齐(默认值）*/
+	vertical-align: baseline;
+	/*内容与顶端对齐*/
+	vertical-align: top;
+	/*内容与中部对齐*/
+	vertical-align: middle;
+	/*内容与底部对齐*/
+	vertical-align: bottom;
+	/*设置值,负值往下，正值往上*/
+	vertical-align: -10px;
+}
+

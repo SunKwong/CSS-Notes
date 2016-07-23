@@ -1,0 +1,125 @@
+@charset'utf-8';
+/*
+设置背景色
+background-color:颜色;
+*/
+ div{
+	/*透明色*/
+	background-color: transparent;
+	/*其它颜色*/
+	background-color: silver;
+} 
+
+/*
+设置背景图片
+background-image:url();
+*/
+ div{
+	/*取消背景图片的设置*/
+	background-image: none;
+	/*设置背景图片*/
+	background-image: url(1.jpg);
+} 
+
+/*
+背景图片的重复方式
+background-repeat:属性值;
+*/
+ div{
+	/*水平重复*/
+	background-repeat: repeat-x;
+	/*垂直重复*/
+	background-repeat: repeat-y;
+	/*水平和垂直同时重复*/
+	background-repeat: repeat;
+	/*不重复*/
+	background-repeat: no-repeat;
+} 
+
+/*
+背景图片的起始位置
+background-position:属性值;
+注意：默认相对于内边距盒子的定位，可通过background-origin改变。
+*/
+ div{
+	/*图片置于页面上方*/
+	background-position: top;
+	/*图片置于页面左上方*/
+	background-position: top left;
+	/*长度或百分比：左 上*/
+	background-position: 20px 20px;
+}
+ 
+/*
+背景图像显示尺寸，CSS3属性
+background-size:属性值;
+注意：
+	默认相对于内边距盒子的显示效果，可通过background-origin改变。
+	此属性并不对图片进行裁剪。
+	cover属性并不对图片进行裁剪，设置定位，起始点将发生改变。
+	contain属性高宽较大者始终相对于不同类型盒子的比较，在设置定位的情况下，起始点将发生改变。
+*/
+ div{
+	/*图像以默认尺寸显示*/
+	background-size: auto;
+	/*等比例缩放，至少覆盖容器，但可能超出容器*/
+	background-size: cover;
+	/*等比例缩放，使宽高较大者与容器重合*/
+	background-size: contain;
+	/*设置图片宽高，长度值或百分比:宽 高*/
+	background-size: 100px 100px;
+} 
+
+/*
+背景图固定位置
+background-attachment:属性值;
+*/
+ div{
+	/*背景图固定在元素上，随元素一起滚动(默认值)*/
+	background-attachment: scroll;
+	/*背景图固定在视窗上，脱离元素，不随元素一起滚动*/
+	background-attachment: fixed;
+} 
+
+/*
+背景图显示起始位置 CSS3属性
+background-origin:属性值;
+注意：background-attachement为fixed将使background-origin设置无效
+*/
+ div{
+	/*从内容盒子左上角开始显示图片*/
+	background-origin: content-box;
+	/*从内边距盒子内部开始显示图片(默认值)*/
+	background-origin: padding-box;
+	/*从元素盒子内部开始显示图片*/
+	background-origin: border-box;
+} 
+
+/*
+背景图片显示裁剪方式,CSS3属性
+background-clip:属性值;
+*/
+ div{
+	/*在内容盒子内部裁剪图片*/
+	background-clip: content-box;
+	/*在内边距盒子内部裁剪图片*/
+	background-clip: padding-box;
+	/*在元素盒子内部裁剪图片(默认值)*/
+	background-clip: border-box;
+} 
+
+/*
+简写形式
+background:
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background-size
+background-origin
+background-clip
+;
+*/
+
+

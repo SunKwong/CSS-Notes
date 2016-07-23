@@ -1,0 +1,61 @@
+@charset'utf-8';
+
+/*
+边框图效果
+border-image:source slice width ouset repeat;
+*/
+div{
+	border-image: url(123.png) 27/27px round;
+}
+
+/*
+边框图片地址
+border-image-source:url();
+*/
+div{
+	border-image-source: url(123.png);
+}
+
+/*
+边框图片切割属性
+border-image-slice:属性值;
+*/
+div{
+	border-image-slice: 27;
+	/*单独设置各个边的切割宽度,上右下左*/
+	/*border-image-slice: 27 27 27 27;*/
+}
+
+/*
+边框图片的宽度（非边框宽度）
+border-image-width:属性值;
+*/
+div{
+	border-image-width: 10px;
+	/*单独设置各边宽度,上右下左*/
+	/*border-image-width:20px 10px 20px 10px;*/
+}
+
+/*
+边框图片扩张
+border-image-outset:属性值;
+*/
+div{
+	border-image-outset: 0px;
+}
+
+/*
+背景图显示方式
+border-image-repeat:属性值;
+*/
+div{
+	/*拉伸填充（默认）*/
+	border-image-repeat: stretch;
+	/*平铺方式填充,不改变大小，溢出截断*/
+	border-image-repeat: repeat;
+	/*平铺方式填充,改变大小，完美平铺*/
+	border-image-repeat: round;
+	/*平铺方式填充，不改变大小，设置间距铺满*/
+	/*支持度待定，无显示效果*/
+	border-image-repeat: space;
+}

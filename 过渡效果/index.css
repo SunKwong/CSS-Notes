@@ -1,0 +1,96 @@
+@charset'utf-8';
+
+/* 过渡效果 */
+div{
+	width: 200px;height: 200px;
+	border: 1px solid black;
+	background-color: green;	
+}
+div:hover{
+	background-color: red;
+}
+/*过渡效果一般通过一些简单的CSS动作触发，
+例如：:hover、:focus、:active、:checked
+*/
+
+/* 
+指定过渡的样式
+transition-property:属性值;
+*/
+div{
+	/*无过渡效果*/
+	transition-property:none;
+	/*所有样式都支持过渡效果（默认值）*/
+	transition-property:all;
+	/*指定支持过渡效果的样式*/
+	transition-property:color;
+	/*opcity*/
+	/*background-color background-image background-position*/
+	/*z-index top left left bottom*/
+	/*width height max-width max-height min-width min-height*/
+	/*padding-top padding-right padding-bottom padding-left*/
+	/*boder-color border-top-color border-right-color border-bottom-color boder-left-color*/
+	/*boder-width boder-top-width boder-right-width boder-bottom-width border-left-width*/
+	/*margin-top margin-right margin-bottom margin-left*/
+	/*outline-width outline-color outline-offset*/
+	/*font-size font-weight*/
+	/*letter-spacing word-spacing line-height text-indent text-shadow*/
+	/*border-spacing vertical-align*/
+	/*visibility*/
+}
+
+/* 
+过渡所需时间
+transition-duration:1s;
+*/
+div{
+	transition-duration:1s;
+}
+
+/*
+过渡效果
+transition-timing-function:属性值;
+*/
+div{
+	/*速度由快到慢，逐渐变慢(默认值)*/
+	/*贝塞尔曲线(0.25,0.1,0.25,1.0)*/
+	transition-timing-function:ease;
+	/*恒速*/
+	/*贝塞尔曲线(0.0,0.0,1.0,1.0)*/
+	transition-timing-function:linear;
+	/*速度越来越快*/
+	/*贝塞尔曲线(0.42,0,1.0,1.0)*/
+	transition-timing-function:ease-in;
+	/*速度越来越慢*/
+	/*贝塞尔曲线(0,0,0.58,1.0)*/
+	transition-timing-function:ease-out;
+	/*先加速，再减速*/
+	/*贝塞尔曲线(0.42,0,0.58,1.0)*/
+	transition-timing-function:ease-in-out;
+	/*自定义缓动*/
+	transition-timing-function:cubic-bezier(0.25,0.67,0.11,0.55);
+	/*跳跃式过渡*/
+	/*steps(n,type) n表示跳跃几次 type为star、end表示开始时还是结束时跳跃*/
+	transition-timing-function:steps(10,end);
+}
+
+/*
+过渡延迟效果
+transition-delay:属性值;
+*/
+div{
+	transition-delay:0s;
+	/*多个样式时，设置多个延迟时间*/
+	transition-delay:0s,1s,0s;
+}
+
+/*
+过渡
+transition:property duration timing-function delay;
+*/
+div{
+	/*单独设置样式*/
+	transition:color 1s ease 0s,border-color 1s ease,0s;
+	/*统一样式*/
+	transition:all 1s ease 0s;
+}

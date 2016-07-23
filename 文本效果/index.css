@@ -1,0 +1,196 @@
+@charset'utf-8';
+
+
+/*
+文本颜色（文本前景色)
+color:属性值;
+*/
+p{
+	color: red;
+}
+
+/* 
+文本线条
+text-decoration:属性值;
+ */
+ p{
+ 	/*无线条*/
+ 	text-decoration: none;
+ 	/*下划线*/
+ 	text-decoration: underline;
+ 	/*中间线*/
+ 	text-decoration: line-through;
+ 	/*上划线*/
+ 	text-decoration: overline;
+ }
+
+/* 
+文本大小写:
+text-transform:属性值;
+*/
+ p{
+ 	/*默认状态*/
+ 	text-transform: none;
+ 	/*首字母大写*/
+ 	text-transform: capitalize;
+ 	/*全部大写*/
+ 	text-transform: uppercase;
+ 	/*全部小写*/
+ 	text-transform: lowercase;
+ }
+
+/* 
+文本缩进:
+text-index:属性值;
+*/
+p{
+	/*默认间距*/
+	text-indent: normal;
+	/*文本缩进*/
+	text-indent: 12px;
+}
+
+/* 
+文本对齐:
+text-align:属性值;
+*/
+p{	
+	/*左对齐*/
+	text-align: left;
+	/*居中对齐*/
+	text-align: center;
+	/*居右对齐*/
+	text-align: right;
+	/*两端对齐*/
+	text-align: justify;
+	/*对齐开始边界*/
+	text-align: start;
+	/*对齐结束边界*/
+	text-align: end;
+}
+
+/* 
+段落行高:
+line-height:属性值;
+*/
+p{	
+	/*默认行高*/
+	line-height: normal;
+	/*数值行高*/
+	line-height: 1.4;
+	/*长度行高*/
+	line-height: 24px;
+	/*百分比行高*/
+	line-height: 200%;
+}
+
+/* 
+字母间距:
+letter-spacing:属性值;
+*/
+p{
+	/*默认间距*/
+	letter-spacing: normal;
+	/*设置间距*/
+	letter-spacing: 2px;
+}
+
+/* 
+单词间距:
+word-spacing:属性值;
+*/
+p{
+	/*默认值*/
+	word-spacing: normal;
+	/*设置间距*/
+	word-spacing: 10px;
+}
+
+/* 
+过长单词换行:
+word-wrap:属性值;
+*/
+p{
+	/*默认值*/
+	word-wrap: normal;
+	/*长单词换行*/
+	word-wrap:break-word;
+}
+
+/* 
+空白排版方式:
+white-space:属性值;
+*/
+p{
+	/*默认值*/	/*不识别回车*/
+	white-space: normal;	/*不保留空白符，文本排满换行*/
+	/*不换行*/
+	white-space: nowrap;	/*不保留空白符，文本不换行*/
+	/*保留空白符*/
+	white-space: pre;		/*保留空白符，遇换行符换行*/
+	/*不保留空白符换行*/ /*识别回车*/
+	white-space: pre-line;	/*不保留空白符，排满或遇换行符换行*/
+	/*保留空白符换行*/	/*识别回车*/
+	white-space: pre-wrap;	/*保留空白符，排满或遇换行符换行*/
+}
+
+/* 
+文本阴影:
+text-shadow:水平偏移量,垂直偏移量,阴影模糊半径,阴影颜色;
+ */
+ h1{
+	/*正值阴影*/
+	text-shadow:1px 1px 2px red;
+	/*负值阴影*/
+	text-shadow:-1px -1px 2px red;
+	/*多重阴影*/
+	text-shadow:1px 0px 0px gray,
+			2px 0px 0px red;
+}  
+
+/*
+文本裁剪
+text-overflow:属性值;
+*/
+/* 注意：必须使用不换行和overflow控制溢出 */
+p{
+	display: block;
+	width: 60px;
+}
+p{
+	/*不换行*/
+	white-space: nowrap;
+	/*溢出隐藏*/
+	overflow: hidden;
+	/*文本裁剪，不加省略号*/
+	text-overflow:clip;
+	/*文本裁剪，加省略号*/
+	text-overflow:ellipsis;
+} 
+
+/*
+文本描边
+text-stroke:width,color;
+支持度不佳
+*/
+h1{
+	/*文本描边*/
+	text-stroke-width:2px;
+	text-stroke-color:red;
+	/*简写形式*/
+	text-stroke:2px red;
+} 
+
+/*
+文本填充
+text-fill-color:color;
+支持度不佳
+*/
+h1{
+	/*不配合背景样式，和color没区别*/
+	text-fill-color:red;
+	/*配合背景产生渐变字*/
+	background-image: linear-gradient(top,red 0%,blue 50%,green 100%);
+	background-clip: text;
+	text-fill-color:transparent;
+} 

@@ -1,0 +1,54 @@
+/*
+问题一：
+	设置background-attachement,将使起始位置变为元素盒子，
+	不可通过background-origin改变起始位置
+	可通过background-position设置背景图相对于元素盒子的位置。
+	background-size将相对于元素盒子来计算
+*/
+div{
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin:padding-box;
+	background-position: 80px 80px;
+	background-size: contain;
+}
+
+/*
+问题二：
+	设置背景图定位的情况下，background-origin可以设置相对于某类盒子定位，默认为内边距盒子，
+	background-size将相对于定位点开始计算。
+*/
+div{
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-position: 30px 30px;
+	background-origin: content-box;
+	background-size: cover;
+}
+
+/*
+问题三：
+	设置background-origin,将改变background-position相对于不同类型的盒子定位。
+	注意：设置background-attachment：fixed;将使background-origin的设置无效。
+*/
+div{
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-position: 30px 30px;
+	background-origin: content-box;
+}
+
+
+/*
+问题四：
+	在定位相对盒子与background-clip裁剪盒子相同的情况下，
+	background-position将影响background-clip的起始裁剪位置。
+*/
+div{
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-position: 30px 30px;
+	background-origin: content-box;
+	background-clip: content-box;
+}
