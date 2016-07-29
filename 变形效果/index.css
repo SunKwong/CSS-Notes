@@ -1,0 +1,85 @@
+@charset'utf-8';
+
+div{
+	width: 100px;height: 100px;
+	background-color: red;
+}
+
+/*变换效果*/
+
+/*
+变换效果
+transform:属性值; 
+*/
+div{
+	/*无变换(默认值)*/
+	transform:none;
+
+	/* 移动元素 *//*也可使用百分比*/
+	transform:translate(100px,100px);
+	/*向水平平移*/
+	transform:translateX(100px);
+	/*向垂直平移*/
+	transform:translateY(100px);	
+	
+	/* 缩放元素 */
+	transform:scale(1.5,1.5);
+	/*水平缩放*/
+	transform:scaleX(1.5);
+	/*垂直缩放*/
+	transform:scaleY(1.5);	
+
+	/*旋转元素*/
+	/*0-360deg*/
+	/*transform:rotate(-45deg);*/
+
+	/*倾斜元素*/
+	transform:skew(45deg,-45deg);
+	/*水平倾斜*/
+	transform:skewX(45deg);
+	/*垂直倾斜*/
+	transform:skewY(-45deg);
+
+	/*指定自定义变换*//*比较麻烦*/
+	transform:matrix(1,0,0,1,30,30);
+
+/*
+设置变换起点
+transform-origin:属性值; 
+*/
+	/*默认值使用元素中心作为起点*/
+	transform-origin:center center;
+	transform-origin:50% 50%;
+	/*以左上角为基准点变形*/
+	transform-origin:left top;
+	transform-orgin:0px 0px;
+}
+
+/*3D变形*/
+body{
+/*
+嵌套元素如何在3D空间呈现
+transform-style:属性值;
+注意：设置到变换元素的父元素中
+*/
+	/*所有子元素在2D平面呈现*/
+	transform-style:flat;
+	/*子元素在3D空间中呈现*/
+	transfom-style:preserve-3d;
+}
+div{
+/*
+设置查看者的位置
+perspective:属性值;
+*/
+	/*无限的角度看3D物体，看上去是平的*/
+	perspective:none;
+	/*值越大，角度越远，值越小，角度越大*/
+	perpective:1000px;
+
+/*
+3D变形属性
+*/
+	/*3D*/
+	transform:translate3d(300px,100px,240px);
+}

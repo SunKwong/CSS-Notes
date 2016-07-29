@@ -1,6 +1,7 @@
 @charset'utf-8';
 
 /*字体总汇*/
+
 /* font:倾斜 加粗 大小写 大小 字体; */
 
 /* 
@@ -15,6 +16,7 @@ h1{
  	/*轻微的倾斜*/
  	font-style: oblique;
  }
+
 /* 
 文本加粗：
 font-weight:属性值;
@@ -31,6 +33,7 @@ font-weight:属性值;
  	/*更粗*/
  	font-weight: bolder;
  }
+
 /* 
 文本大小写：
 font-variant:属性值;
@@ -41,14 +44,15 @@ font-variant:属性值;
  	/*大写状态*/
  	font-variant: small-caps;
  }
+
  /* 
 文本大小：
 font-size:属性值;
  */
  p{
  	font-size: 14px;
- 	font-size: 80%;
  }
+ 
  /* 
 文本字体：
 font-family:属性值;

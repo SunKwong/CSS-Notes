@@ -1,4 +1,18 @@
 @charset'utf-8';
+
+/*
+简写形式
+background:
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background-size
+background-origin
+background-clip
+*/
+
 /*
 设置背景色
 background-color:颜色;
@@ -6,8 +20,6 @@ background-color:颜色;
  div{
 	/*透明色*/
 	background-color: transparent;
-	/*其它颜色*/
-	background-color: silver;
 } 
 
 /*
@@ -23,14 +35,14 @@ background-image:url();
 
 /*
 背景图片的重复方式
-background-repeat:属性值;
+background-repeat:repeat;
 */
  div{
 	/*水平重复*/
 	background-repeat: repeat-x;
 	/*垂直重复*/
 	background-repeat: repeat-y;
-	/*水平和垂直同时重复*/
+	/*水平和垂直同时重复(默认值)*/
 	background-repeat: repeat;
 	/*不重复*/
 	background-repeat: no-repeat;
@@ -45,14 +57,14 @@ background-position:属性值;
 	/*图片置于页面上方*/
 	background-position: top;
 	/*图片置于页面左上方*/
-	background-position: top left;
+	background-position: left top;
 	/*长度或百分比：左 上*/
 	background-position: 20px 20px;
 }
  
 /*
 背景图像显示尺寸，CSS3属性
-background-size:属性值;
+background-size:auto;
 注意：
 	默认相对于内边距盒子的显示效果，可通过background-origin改变。
 	此属性并不对图片进行裁剪。
@@ -108,18 +120,5 @@ background-clip:属性值;
 	background-clip: border-box;
 } 
 
-/*
-简写形式
-background:
-background-color
-background-image
-background-repeat
-background-attachment
-background-position
-background-size
-background-origin
-background-clip
-;
-*/
 
 
